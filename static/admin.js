@@ -45,7 +45,13 @@ function renderLeads(leads) {
 
   body.innerHTML = leads.map(lead => `
     <tr>
-      <td><strong>${escapeHtml(lead.lead_id)}</strong><br>${escapeHtml(lead.name)}</td>
+     <td>
+  <strong>${escapeHtml(lead.lead_id)}</strong>
+  <br>
+  <small>DB ID: ${escapeHtml(lead.id)}</small>
+  <br>
+  ${escapeHtml(lead.name)}
+</td>
       <td>${escapeHtml(lead.business)}<br><small>${escapeHtml(lead.city)}</small></td>
       <td>${escapeHtml(lead.phone)}<br><a href="https://wa.me/${escapeHtml(lead.phone.replace(/\D/g, ""))}" target="_blank" rel="noopener">WhatsApp ↗</a></td>
       <td>${escapeHtml(lead.selected_plan || "Custom")}<br><small>${escapeHtml(lead.budget)}</small></td>
