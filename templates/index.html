@@ -11,10 +11,17 @@
 
   <link rel="canonical" href="https://webmek.agency/">
 
+  <!-- Open Graph / SEO / GEO Meta Tags -->
   <meta property="og:title" content="WebMek | Affordable Website Design & Digital Solutions">
   <meta property="og:description" content="Professional websites, WhatsApp integration, booking systems and digital solutions for local businesses.">
   <meta property="og:url" content="https://webmek.agency/">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://webmek.agency/static/image/WhatsApp%20Image%202026-10-04%20at%2012.27.28.jpeg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WebMek | Affordable Website Design & Digital Solutions">
+  <meta name="twitter:description" content="Professional business websites starting at ₹2,999 with free hosting, SSL, and WhatsApp integration.">
+  <meta name="twitter:image" content="https://webmek.agency/static/image/WhatsApp%20Image%202026-10-04%20at%2012.27.28.jpeg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +30,67 @@
   <!-- FontAwesome for Social Media Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+  <!-- Structured Data (JSON-LD) for AEO & GEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://webmek.agency/#organization",
+        "name": "WebMek",
+        "url": "https://webmek.agency/",
+        "logo": "https://webmek.agency/static/image/WhatsApp%20Image%202026-10-04%20at%2012.27.28.jpeg",
+        "image": "https://webmek.agency/static/image/WhatsApp%20Image%202026-10-04%20at%2012.27.28.jpeg",
+        "description": "Affordable website design, business websites, e-commerce, WhatsApp integration, and digital solutions for local businesses in India.",
+        "telephone": "+916351199175",
+        "email": "webmek@gmail.com",
+        "priceRange": "₹2999 - ₹9999",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://www.instagram.com/webmekagency",
+          "https://facebook.com/webmekagency",
+          "https://www.linkedin.com/in/webmek-agency-987a30438",
+          "https://github.com/webmekk-agency"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://webmek.agency/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a website cost with WebMek?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WebMek website design packages start at ₹2,999 for a 2-3 page Starter website, ₹4,999 for a Business website, ₹7,999 for a Professional website, and ₹9,999+ for E-Commerce online stores."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take WebMek to build a business website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most standard business websites are delivered within 3 to 7 working days, depending on the scope and rapid provision of content by the client."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does WebMek include hosting and WhatsApp integration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, WebMek packages include 1 year of free web hosting, free SSL certificates, and direct WhatsApp lead integration for local Indian business owners."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -32,7 +100,7 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <a href="#home" class="brand" style="display: flex; align-items: center; text-decoration: none;">
-       <img src="{{ url_for('static', filename='image/WhatsApp_Image_2026-09-25_at_21.04.05-removebg-preview.png') }}" alt="WebMek Logo" style="height: 100px; width: auto; object-fit: contain;">
+        <img src="{{ url_for('static', filename='image/WhatsApp Image 2026-10-04 at 12.27.28.jpeg') }}" alt="WebMek Digital Agency Logo" style="height: 48px; width: auto; object-fit: contain;">
       </a>
       <nav class="desktop-nav">
         <a href="#home">Home</a>
@@ -40,6 +108,7 @@
         <a href="#pricing">Pricing</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="nav-actions">
@@ -53,6 +122,7 @@
       <a href="#pricing">Pricing</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
       <button class="btn btn-primary" data-open-apply>Get Started</button>
     </div>
@@ -67,13 +137,13 @@
           <h1>Aapka Business.<br><span class="gradient-text">Ab Online.</span></h1>
           <p class="hero-text">Professional websites, WhatsApp integration, booking systems and digital support — designed for small and growing businesses.</p>
           <div class="hero-actions">
-            <button class="btn btn-primary btn-lg" data-open-apply>Get Your Website ↗️</button>
+            <button class="btn btn-primary btn-lg" data-open-apply>Get Your Website ↗</button>
             <a class="btn btn-outline btn-lg" href="#portfolio">See Our Work</a>
           </div>
 
-          <!-- TRUST ROW LINKS -->
+          <!-- TRUST ROW SOCIAL LINKS -->
           <div class="trust-row">
-            <a href="https://www.instagram.com/webmekagency?stkn=dzM4cmIwemV3dGZq" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+            <a href="https://www.instagram.com/webmekagency" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
               <i class="fa-brands fa-instagram" style="color: #E4405F;"></i> Instagram
             </a>
             <a href="https://facebook.com/webmekagency" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
@@ -374,6 +444,34 @@
       </div>
     </section>
 
+    <!-- FAQ SECTION (AEO & GEO Optimized) -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Frequently Asked Questions</span>
+          <h2>Got questions? We have <span class="gradient-text">answers.</span></h2>
+          <p>Everything you need to know about getting your local business online with WebMek.</p>
+        </div>
+        
+        <div class="faq-grid" style="display: grid; gap: 16px; max-width: 800px; margin: 0 auto;">
+          <details style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 18px; border-radius: 10px; color: #fff;">
+            <summary style="font-weight: 600; cursor: pointer; font-size: 1.05rem;">How much does a small business website cost in India?</summary>
+            <p style="margin-top: 12px; color: #94a3b8; line-height: 1.6;">At WebMek, business websites start at ₹2,999 for a Starter package, ₹4,999 for standard Business sites, and ₹9,999 for full E-commerce online stores with payment integration.</p>
+          </details>
+
+          <details style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 18px; border-radius: 10px; color: #fff;">
+            <summary style="font-weight: 600; cursor: pointer; font-size: 1.05rem;">What is included with WebMek website design services?</summary>
+            <p style="margin-top: 12px; color: #94a3b8; line-height: 1.6;">All packages include 1 year of free hosting, free SSL security certificates, mobile-responsive layout, WhatsApp lead integration, and Google Maps setup.</p>
+          </details>
+
+          <details style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 18px; border-radius: 10px; color: #fff;">
+            <summary style="font-weight: 600; cursor: pointer; font-size: 1.05rem;">How fast will my website go live?</summary>
+            <p style="margin-top: 12px; color: #94a3b8; line-height: 1.6;">Standard Starter and Business websites are typically built, reviewed, and launched within 3 to 7 business days.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA SECTION -->
     <section class="section cta-section" id="contact">
       <div class="container cta-card reveal" style="background: linear-gradient(135deg, rgba(20, 25, 45, 0.95), rgba(10, 15, 30, 0.95)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;">
@@ -395,13 +493,13 @@
     <div class="container footer-grid">
       <div>
         <a class="brand" href="#home" style="display: inline-block;">
-          <img src="{{ url_for('static', filename='image/WhatsApp_Image_2026-09-25_at_21.04.05-removebg-preview.png') }}" alt="WebMek Logo" style="height: 100px; width: auto; object-fit: contain;">
+          <img src="{{ url_for('static', filename='image/WhatsApp Image 2026-10-04 at 12.27.28.jpeg') }}" alt="WebMek Logo" style="height: 48px; width: auto; object-fit: contain;">
         </a>
         <p style="margin-top: 12px; margin-bottom: 16px; opacity: 0.8; max-width: 280px; font-size: 0.95rem; line-height: 1.5;">
           High-performing, affordable websites and digital solutions built to grow Indian local businesses.</p>
 
         <div style="display: flex; gap: 12px; margin-top: 16px; align-items: center;">
-          <a href="https://www.instagram.com/webmekagency?stkn=dzM4cmIwemV3dGZq" target="_blank" rel="noopener" aria-label="Instagram" style="color: #E4405F; font-size: 1.25rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.instagram.com/webmekagency" target="_blank" rel="noopener" aria-label="Instagram" style="color: #E4405F; font-size: 1.25rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-brands fa-instagram"></i></a>
           <a href="https://facebook.com/webmekagency" target="_blank" rel="noopener" aria-label="Facebook" style="color: #1877F2; font-size: 1.25rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-brands fa-facebook"></i></a>
           <a href="https://www.linkedin.com/in/webmek-agency-987a30438" target="_blank" rel="noopener" aria-label="LinkedIn" style="color: #0A66C2; font-size: 1.25rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-brands fa-linkedin"></i></a>
           <a href="https://github.com/webmekk-agency" target="_blank" rel="noopener" aria-label="GitHub" style="color: #FFFFFF; font-size: 1.25rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-brands fa-github"></i></a>
@@ -415,6 +513,7 @@
         <a href="#pricing">Pricing</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#about">About Us</a>
+        <a href="#faq">FAQ</a>
       </div>
 
       <div>
