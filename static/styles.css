@@ -348,7 +348,8 @@ button:disabled {
 
 .browser-content {
   padding: 22px;
-  /* =========================
+}
+/* =========================
    REFERRAL BANNER
 ========================= */
 
@@ -508,8 +509,6 @@ button:disabled {
     box-shadow:
         0 10px 30px rgba(124, 58, 237, 0.6);
 }
-}
-
 .mini-nav {
   display: flex;
   align-items: center;
