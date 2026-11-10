@@ -5,746 +5,1139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WebMek | Affordable Digital Solutions</title>
+    <title>WebMek - Affordable Digital Solutions</title>
 
-    <meta name="description" content="WebMek creates professional websites, e-commerce stores, booking systems and digital solutions for businesses.">
+    <meta name="description" content="WebMek provides affordable professional websites, WhatsApp integration, booking systems and digital solutions for businesses.">
 
-    <meta name="theme-color" content="#17145d">
+    <meta name="theme-color" content="#02091c">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet"
-          href="{{ url_for('static', filename='styles.css') }}">
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
-
-<header class="site-header">
-    <div class="container nav-wrap">
-
-        <a href="#home" class="brand">
-            <img
-                src="{{ url_for('static', filename='image/WhatsApp_Image_2026-09-25_at_21.04.05-removebg-preview.png') }}"
-                alt="WebMek Logo">
-        </a>
-
-        <nav class="desktop-nav" id="navigation">
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-        <div class="nav-actions">
-            <a href="/login" class="btn btn-outline">Login</a>
-            <a href="/signup" class="btn btn-primary">Sign Up</a>
-        </div>
-
-        <button class="menu-toggle"
-                id="menuToggle"
-                aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-
-    </div>
-</header>
+    <!-- BACKGROUND -->
+    <div class="cursor-glow"></div>
+    <div class="bg-grid"></div>
 
 
-<main>
+    <!-- HEADER -->
+    <header class="site-header">
 
-<!-- HERO SECTION -->
+        <div class="container nav-wrap">
 
-<section class="hero" id="home">
+            <!-- LOGO -->
+            <a href="#home" class="brand">
+                <img src="{{ url_for('static', filename='image/WhatsApp_Image_2026-09-25_at_21.04.05-removebg-preview.png') }}"
+                     alt="WebMek Logo">
+            </a>
 
-    <div class="container hero-grid">
 
-        <div class="hero-content">
+            <!-- NAVIGATION -->
+            <nav class="desktop-nav" id="mainNav">
 
-            <div class="eyebrow">
-                <span class="pulse-dot"></span>
-                🚀 Grow Your Business
-            </div>
+                <a href="#home" class="active">Home</a>
 
-            <h1>
-                Aapka Business.
-                <span class="gradient-text">Ab Online.</span>
-            </h1>
+                <a href="#services">Services</a>
 
-            <p class="hero-text">
-                Professional websites, WhatsApp integration,
-                booking systems and digital solutions.
-                Take your business to the next level with WebMek.
-            </p>
+                <a href="#pricing">Pricing</a>
 
-            <div class="hero-actions">
+                <a href="#portfolio">Portfolio</a>
 
-                <a href="#contact" class="btn btn-primary btn-lg">
-                    Get Started
-                    <i class="fas fa-arrow-right"></i>
+                <a href="#about">About</a>
+
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+
+            <!-- BUTTONS -->
+            <div class="nav-actions">
+
+                <a href="/login" class="btn btn-outline">
+                    Login
                 </a>
 
-                <a href="#services" class="btn btn-outline btn-lg">
-                    Our Services
+                <a href="/signup" class="btn btn-primary">
+                    Sign Up
                 </a>
 
             </div>
 
-            <div class="trust-row">
 
-                <div class="trust-item">
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <strong>50+</strong>
-                        <span>Happy Clients</span>
-                    </div>
-                </div>
+            <!-- MOBILE MENU -->
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
 
-                <div class="trust-item">
-                    <i class="fas fa-star"></i>
-                    <div>
-                        <strong>4.9/5</strong>
-                        <span>Client Rating</span>
-                    </div>
-                </div>
+                <i class="fas fa-bars"></i>
 
-                <div class="trust-item">
-                    <i class="fas fa-bolt"></i>
-                    <div>
-                        <strong>99%</strong>
-                        <span>Uptime Goal</span>
-                    </div>
-                </div>
-
-                <div class="trust-item">
-                    <i class="fas fa-headset"></i>
-                    <div>
-                        <strong>24/7</strong>
-                        <span>Support</span>
-                    </div>
-                </div>
-
-            </div>
+            </button>
 
         </div>
 
+    </header>
 
-        <!-- HERO WEBSITE MOCKUP -->
 
-        <div class="hero-visual">
 
-            <div class="orb orb-a"></div>
-            <div class="orb orb-b"></div>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
 
-            <div class="browser-card">
+        <div class="container hero-grid">
 
-                <div class="browser-top">
 
-                    <div class="browser-dots">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+            <!-- HERO CONTENT -->
+            <div class="hero-content">
 
-                    <div class="browser-url">
-                        www.webmek.agency
-                    </div>
+                <div class="eyebrow">
+
+                    <span class="pulse-dot"></span>
+
+                    🚀 Grow Your Business
 
                 </div>
 
-                <div class="mini-website">
 
-                    <div class="mini-nav">
-                        <strong>WEBMEK</strong>
-                        <span>Home</span>
-                        <span>Services</span>
-                        <span>Contact</span>
-                    </div>
+                <h1>
 
-                    <div class="mini-hero">
+                    Aapka Business.
 
-                        <h3>
-                            Grow Your Business
-                        </h3>
+                    <span class="gradient-text">
+                        Ab Online.
+                    </span>
 
-                        <p>
-                            Professional Digital Solutions
-                        </p>
-
-                        <div class="mini-btn">
-                            Explore More →
-                        </div>
-
-                    </div>
-
-                    <div class="mini-lines">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                    </div>
-
-                    <div class="mini-services">
-
-                        <div>
-                            <i class="fas fa-globe"></i>
-                            <span>Websites</span>
-                        </div>
-
-                        <div>
-                            <i class="fas fa-shopping-cart"></i>
-                            <span>E-Commerce</span>
-                        </div>
-
-                        <div>
-                            <i class="fas fa-calendar-check"></i>
-                            <span>Booking</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="floating-label">
-                <i class="fas fa-chart-line"></i>
-                Digital Growth
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+                </h1>
 
 
-<!-- SERVICES -->
+                <p class="hero-text">
 
-<section class="section services-section" id="services">
+                    Professional websites, WhatsApp integration,
+                    booking systems and more.
 
-    <div class="container">
+                    Take your business to the next level with WebMek.
 
-        <div class="section-head">
-            <span class="section-tag">WHAT WE DO</span>
-            <h2>Our <span class="gradient-text">Services</span></h2>
-            <p>Everything your business needs to grow online.</p>
-        </div>
-
-        <div class="services-grid">
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-globe"></i>
-                </div>
-
-                <h3>Website Development</h3>
-
-                <p>
-                    Modern, responsive and professional
-                    websites for your business.
                 </p>
 
-                <a href="#contact">Learn More →</a>
 
-            </div>
+                <div class="hero-actions">
+
+                    <a href="#contact" class="btn btn-primary btn-lg">
+
+                        Get Started
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
 
 
-            <div class="service-card">
+                    <a href="#services" class="btn btn-outline btn-lg">
 
-                <div class="service-icon">
-                    <i class="fab fa-whatsapp"></i>
+                        Our Services
+
+                    </a>
+
                 </div>
 
-                <h3>WhatsApp Integration</h3>
 
-                <p>
-                    Connect with your customers directly
-                    through WhatsApp.
-                </p>
+                <!-- TRUST ITEMS -->
+                <div class="trust-row">
 
-                <a href="#contact">Learn More →</a>
+                    <div class="trust-item">
 
-            </div>
+                        <i class="fas fa-rocket"></i>
+
+                        <div>
+
+                            <strong>50+</strong>
+
+                            <span>Happy Clients</span>
+
+                        </div>
+
+                    </div>
 
 
-            <div class="service-card">
+                    <div class="trust-item">
 
-                <div class="service-icon">
-                    <i class="fas fa-calendar-check"></i>
+                        <i class="fas fa-star"></i>
+
+                        <div>
+
+                            <strong>4.9/5</strong>
+
+                            <span>Client Rating</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="trust-item">
+
+                        <i class="fas fa-bolt"></i>
+
+                        <div>
+
+                            <strong>99%</strong>
+
+                            <span>Uptime</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="trust-item">
+
+                        <i class="fas fa-headset"></i>
+
+                        <div>
+
+                            <strong>24/7</strong>
+
+                            <span>Support</span>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <h3>Booking Systems</h3>
-
-                <p>
-                    Manage appointments and online
-                    bookings easily.
-                </p>
-
-                <a href="#contact">Learn More →</a>
-
             </div>
 
 
-            <div class="service-card">
 
-                <div class="service-icon">
+            <!-- HERO VISUAL -->
+            <div class="hero-visual">
+
+                <div class="orb orb-a"></div>
+
+                <div class="orb orb-b"></div>
+
+
+                <div class="browser-card">
+
+                    <div class="browser-top">
+
+                        <div class="browser-dots">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <div class="browser-url">
+                            www.webmek.agency
+                        </div>
+
+                    </div>
+
+
+                    <div class="mini-website">
+
+                        <div class="mini-nav">
+
+                            <strong>WebMek</strong>
+
+                            <span>Home</span>
+
+                            <span>Services</span>
+
+                            <span>Contact</span>
+
+                        </div>
+
+
+                        <div class="mini-hero">
+
+                            <h3>
+                                Build Your Future
+                            </h3>
+
+                            <p>
+                                Grow your business online with WebMek.
+                            </p>
+
+                            <span class="mini-btn">
+                                Explore More
+                            </span>
+
+                        </div>
+
+
+                        <div class="mini-lines">
+
+                            <i></i>
+                            <i></i>
+                            <i></i>
+
+                        </div>
+
+
+                        <div class="mini-services">
+
+                            <div>
+
+                                <i class="fas fa-globe"></i>
+
+                                <span>Website</span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fab fa-whatsapp"></i>
+
+                                <span>WhatsApp</span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fas fa-calendar"></i>
+
+                                <span>Booking</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="floating-label">
+
                     <i class="fas fa-chart-line"></i>
+
+                    Digital Growth
+
                 </div>
-
-                <h3>Digital Solutions</h3>
-
-                <p>
-                    Smart digital tools to help
-                    your business grow.
-                </p>
-
-                <a href="#contact">Learn More →</a>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- ABOUT -->
 
-<section class="section about-section" id="about">
+    <!-- SERVICES SECTION -->
+    <section class="section services-section" id="services">
 
-    <div class="container about-grid">
+        <div class="container">
 
-        <div class="about-visual">
+            <div class="section-head">
 
-            <div class="about-logo">
-                <img
+                <span class="section-tag">
+                    WHAT WE OFFER
+                </span>
+
+                <h2>Our Services</h2>
+
+                <p>
+                    Everything your business needs to grow online.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+
+                <!-- SERVICE 1 -->
+                <div class="service-card">
+
+                    <div class="service-icon">
+
+                        <i class="fas fa-globe"></i>
+
+                    </div>
+
+                    <h3>Website Development</h3>
+
+                    <p>
+                        Modern, responsive and professional
+                        websites for your business.
+                    </p>
+
+                    <a href="#contact">
+                        Get Started →
+                    </a>
+
+                </div>
+
+
+                <!-- SERVICE 2 -->
+                <div class="service-card">
+
+                    <div class="service-icon">
+
+                        <i class="fab fa-whatsapp"></i>
+
+                    </div>
+
+                    <h3>WhatsApp Integration</h3>
+
+                    <p>
+                        Connect with your customers easily
+                        through WhatsApp.
+                    </p>
+
+                    <a href="#contact">
+                        Get Started →
+                    </a>
+
+                </div>
+
+
+                <!-- SERVICE 3 -->
+                <div class="service-card">
+
+                    <div class="service-icon">
+
+                        <i class="fas fa-calendar-check"></i>
+
+                    </div>
+
+                    <h3>Booking Systems</h3>
+
+                    <p>
+                        Easy online booking systems
+                        for your business.
+                    </p>
+
+                    <a href="#contact">
+                        Get Started →
+                    </a>
+
+                </div>
+
+
+                <!-- SERVICE 4 -->
+                <div class="service-card">
+
+                    <div class="service-icon">
+
+                        <i class="fas fa-chart-line"></i>
+
+                    </div>
+
+                    <h3>Digital Solutions</h3>
+
+                    <p>
+                        Smart digital solutions to
+                        scale your business.
+                    </p>
+
+                    <a href="#contact">
+                        Get Started →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+
+        <div class="container about-grid">
+
+
+            <div class="about-visual">
+
+                <div class="about-logo">
+
+                    <img
                     src="{{ url_for('static', filename='image/WhatsApp_Image_2026-09-25_at_21.04.05-removebg-preview.png') }}"
                     alt="WebMek">
-            </div>
 
-            <div class="about-caption">
-                Affordable Digital Solutions
-            </div>
-
-        </div>
-
-        <div class="about-content">
-
-            <span class="section-tag">ABOUT WEBMEK</span>
-
-            <h2>
-                We Make Your Business
-                <span class="gradient-text">Digital.</span>
-            </h2>
-
-            <p>
-                WebMek helps businesses establish their
-                online presence through affordable,
-                modern and professional digital solutions.
-            </p>
-
-            <p>
-                Our goal is to make technology accessible
-                to every business, from small shops to
-                growing companies.
-            </p>
-
-            <div class="about-points">
-
-                <div>
-                    <i class="fas fa-check-circle"></i>
-                    Modern Website Designs
                 </div>
 
-                <div>
-                    <i class="fas fa-check-circle"></i>
-                    Mobile Responsive Websites
-                </div>
-
-                <div>
-                    <i class="fas fa-check-circle"></i>
-                    Affordable Pricing
-                </div>
-
-                <div>
-                    <i class="fas fa-check-circle"></i>
-                    Dedicated Support
+                <div class="about-caption">
+                    Affordable Digital Solutions
                 </div>
 
             </div>
 
-            <a href="#contact" class="btn btn-primary">
-                Work With Us →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
 
 
-<!-- PRICING -->
+            <div class="about-content">
 
-<section class="section pricing-section" id="pricing">
+                <span class="section-tag">
+                    ABOUT WEBMEK
+                </span>
 
-    <div class="container">
+                <h2>
+                    Helping Businesses Grow Digitally
+                </h2>
 
-        <div class="section-head">
+                <p>
+                    WebMek is focused on helping small
+                    businesses establish their online presence
+                    through affordable digital solutions.
+                </p>
 
-            <span class="section-tag">OUR PRICING</span>
-
-            <h2>Choose Your <span class="gradient-text">Plan</span></h2>
-
-            <p>
-                Affordable plans for every business.
-            </p>
-
-        </div>
+                <p>
+                    We create professional websites,
+                    booking systems and smart integrations
+                    that help businesses connect with customers.
+                </p>
 
 
-        <div class="pricing-grid">
+                <div class="about-points">
 
-            <div class="price-card">
+                    <div>
+                        <i class="fas fa-check-circle"></i>
+                        Affordable Solutions
+                    </div>
 
-                <h3>Basic</h3>
+                    <div>
+                        <i class="fas fa-check-circle"></i>
+                        Mobile Friendly
+                    </div>
 
-                <p>For small businesses</p>
+                    <div>
+                        <i class="fas fa-check-circle"></i>
+                        Modern Design
+                    </div>
 
-                <div class="price">
-                    ₹999 <span>/starting</span>
+                    <div>
+                        <i class="fas fa-check-circle"></i>
+                        Customer Support
+                    </div>
+
                 </div>
 
-                <ul>
-                    <li><i class="fas fa-check"></i> Basic Website</li>
-                    <li><i class="fas fa-check"></i> Responsive Design</li>
-                    <li><i class="fas fa-check"></i> Contact Form</li>
-                    <li><i class="fas fa-check"></i> Basic Support</li>
-                </ul>
-
-                <a href="#contact" class="btn btn-outline">
-                    Get Started
-                </a>
-
-            </div>
-
-
-            <div class="price-card featured">
-
-                <div class="popular-tag">
-                    Most Popular
-                </div>
-
-                <h3>Premium</h3>
-
-                <p>For growing businesses</p>
-
-                <div class="price">
-                    ₹1,999 <span>/starting</span>
-                </div>
-
-                <ul>
-                    <li><i class="fas fa-check"></i> Advanced Website</li>
-                    <li><i class="fas fa-check"></i> WhatsApp Integration</li>
-                    <li><i class="fas fa-check"></i> Contact Form</li>
-                    <li><i class="fas fa-check"></i> Priority Support</li>
-                </ul>
 
                 <a href="#contact" class="btn btn-primary">
-                    Get Started
-                </a>
 
-            </div>
+                    Work With Us
 
+                    <i class="fas fa-arrow-right"></i>
 
-            <div class="price-card">
-
-                <h3>Business</h3>
-
-                <p>For established businesses</p>
-
-                <div class="price">
-                    ₹2,999 <span>/starting</span>
-                </div>
-
-                <ul>
-                    <li><i class="fas fa-check"></i> Custom Website</li>
-                    <li><i class="fas fa-check"></i> Advanced Features</li>
-                    <li><i class="fas fa-check"></i> Custom Solutions</li>
-                    <li><i class="fas fa-check"></i> Dedicated Support</li>
-                </ul>
-
-                <a href="#contact" class="btn btn-outline">
-                    Get Started
                 </a>
 
             </div>
 
         </div>
 
-        <p class="pricing-note">
-            Final pricing depends on project requirements.
-        </p>
-
-    </div>
-
-</section>
+    </section>
 
 
-<!-- PORTFOLIO -->
 
-<section class="section portfolio-section" id="portfolio">
+    <!-- PRICING SECTION -->
+    <section class="section pricing-section" id="pricing">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="section-head">
+            <div class="section-head">
 
-            <span class="section-tag">OUR WORK</span>
+                <span class="section-tag">
+                    OUR PRICING
+                </span>
 
-            <h2>Our <span class="gradient-text">Portfolio</span></h2>
+                <h2>Affordable Pricing Plans</h2>
 
-            <p>
-                Explore the types of websites we create.
+                <p>
+                    Choose the right solution for your business.
+                </p>
+
+            </div>
+
+
+            <div class="pricing-grid">
+
+
+                <!-- BASIC PLAN -->
+                <div class="price-card">
+
+                    <h3>Basic</h3>
+
+                    <p>Perfect for small businesses.</p>
+
+                    <div class="price">
+                        ₹2,999
+                        <span>/ starting</span>
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Professional Website
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Mobile Responsive
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Contact Form
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Basic Support
+                        </li>
+
+                    </ul>
+
+                    <a href="#contact" class="btn btn-outline">
+                        Get Started
+                    </a>
+
+                </div>
+
+
+
+                <!-- STANDARD PLAN -->
+                <div class="price-card featured">
+
+                    <span class="popular-tag">
+                        POPULAR
+                    </span>
+
+                    <h3>Standard</h3>
+
+                    <p>For growing businesses.</p>
+
+                    <div class="price">
+                        ₹5,999
+                        <span>/ starting</span>
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Premium Website
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            WhatsApp Integration
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Multiple Pages
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Booking Features
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Support
+                        </li>
+
+                    </ul>
+
+                    <a href="#contact" class="btn btn-primary">
+                        Get Started
+                    </a>
+
+                </div>
+
+
+
+                <!-- PREMIUM PLAN -->
+                <div class="price-card">
+
+                    <h3>Premium</h3>
+
+                    <p>For advanced business needs.</p>
+
+                    <div class="price">
+                        ₹9,999
+                        <span>/ starting</span>
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Premium Website
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Advanced Features
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Booking System
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            WhatsApp Integration
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Priority Support
+                        </li>
+
+                    </ul>
+
+                    <a href="#contact" class="btn btn-outline">
+                        Get Started
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <p class="pricing-note">
+                Final pricing depends on your project requirements.
             </p>
 
         </div>
 
-
-        <div class="portfolio-grid">
-
-            <div class="portfolio-card">
-
-                <div class="portfolio-preview restaurant-preview">
-                    <i class="fas fa-utensils"></i>
-                    <h3>Restaurant</h3>
-                    <span>Delicious Digital Experience</span>
-                </div>
-
-                <div class="portfolio-info">
-                    <h3>Restaurant Website</h3>
-                    <p>Modern and responsive design.</p>
-                </div>
-
-            </div>
+    </section>
 
 
-            <div class="portfolio-card">
 
-                <div class="portfolio-preview hotel-preview">
-                    <i class="fas fa-hotel"></i>
-                    <h3>Luxury Stay</h3>
-                    <span>Book Your Experience</span>
-                </div>
+    <!-- PORTFOLIO SECTION -->
+    <section class="section portfolio-section" id="portfolio">
 
-                <div class="portfolio-info">
-                    <h3>Hotel Website</h3>
-                    <p>Elegant booking experience.</p>
-                </div>
+        <div class="container">
+
+            <div class="section-head">
+
+                <span class="section-tag">
+                    OUR WORK
+                </span>
+
+                <h2>Our Portfolio</h2>
+
+                <p>
+                    Explore digital solutions and website concepts.
+                </p>
 
             </div>
 
 
-            <div class="portfolio-card">
+            <div class="portfolio-grid">
 
-                <div class="portfolio-preview ecommerce-preview">
-                    <i class="fas fa-shopping-bag"></i>
-                    <h3>Online Store</h3>
-                    <span>Shop With Ease</span>
+
+                <div class="portfolio-card">
+
+                    <div class="portfolio-preview restaurant-preview">
+
+                        <i class="fas fa-utensils"></i>
+
+                        <h3>Restaurant</h3>
+
+                        <span>Restaurant Website Concept</span>
+
+                    </div>
+
+                    <div class="portfolio-info">
+
+                        <h3>Restaurant Website</h3>
+
+                        <p>
+                            Modern restaurant website design.
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <div class="portfolio-info">
-                    <h3>E-Commerce Website</h3>
-                    <p>Online shopping solutions.</p>
+
+
+                <div class="portfolio-card">
+
+                    <div class="portfolio-preview hotel-preview">
+
+                        <i class="fas fa-hotel"></i>
+
+                        <h3>Hotel</h3>
+
+                        <span>Hotel Website Concept</span>
+
+                    </div>
+
+                    <div class="portfolio-info">
+
+                        <h3>Hotel Website</h3>
+
+                        <p>
+                            Professional hotel website design.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="portfolio-card">
+
+                    <div class="portfolio-preview ecommerce-preview">
+
+                        <i class="fas fa-shopping-cart"></i>
+
+                        <h3>E-Commerce</h3>
+
+                        <span>Online Shopping Concept</span>
+
+                    </div>
+
+                    <div class="portfolio-info">
+
+                        <h3>E-Commerce Website</h3>
+
+                        <p>
+                            Online shopping website concept.
+                        </p>
+
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- CTA SECTION -->
 
-<section class="cta-section">
+    <!-- CTA SECTION -->
+    <section class="cta-section">
 
-    <div class="container cta-content">
+        <div class="container cta-content">
 
-        <div class="cta-logo">
-            <img
+
+            <div class="cta-logo">
+
+                <img
                 src="{{ url_for('static', filename='image/WhatsApp_Image_2026-09-25_at_21.04.05-removebg-preview.png') }}"
                 alt="WebMek Logo">
-        </div>
-
-        <div>
-            <h2>Ready to Grow Your Business?</h2>
-            <p>Let's build something amazing together.</p>
-        </div>
-
-        <a href="#contact" class="btn cta-btn">
-            Contact Us →
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="section contact-section" id="contact">
-
-    <div class="container">
-
-        <div class="section-head">
-
-            <span class="section-tag">GET IN TOUCH</span>
-
-            <h2>Let's Talk About Your <span class="gradient-text">Project</span></h2>
-
-            <p>
-                Have an idea? Let's turn it into reality.
-            </p>
-
-        </div>
-
-
-        <div class="contact-grid">
-
-            <div class="contact-info">
-
-                <h3>Let's Connect</h3>
-
-                <p>
-                    Tell us about your business and
-                    what you want to build.
-                </p>
-
-                <div class="contact-item">
-                    <i class="fas fa-globe"></i>
-                    <span>www.webmek.agency</span>
-                </div>
-
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>Contact us through our enquiry form.</span>
-                </div>
-
-                <div class="contact-item">
-                    <i class="fas fa-clock"></i>
-                    <span>Let's discuss your project.</span>
-                </div>
 
             </div>
 
 
-            <div class="contact-form-card">
+            <div>
 
-                <h3>Start Your Project</h3>
+                <h2>
+                    Ready to Grow Your Business?
+                </h2>
 
                 <p>
-                    Share your requirements with us.
+                    Let's build something amazing together.
                 </p>
 
-                <a href="/contact" class="btn btn-primary">
-                    Send an Enquiry →
+            </div>
+
+
+            <a href="#contact" class="btn cta-btn">
+
+                Contact Us
+
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+
+        <div class="container">
+
+            <div class="section-head">
+
+                <span class="section-tag">
+                    GET IN TOUCH
+                </span>
+
+                <h2>Let's Talk About Your Project</h2>
+
+                <p>
+                    Tell us about your business and requirements.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <!-- CONTACT DETAILS -->
+                <div class="contact-info">
+
+                    <h3>Contact WebMek</h3>
+
+                    <p>
+                        Have a project in mind?
+                        Get in touch with us.
+                    </p>
+
+
+                    <div class="contact-item">
+
+                        <i class="fas fa-globe"></i>
+
+                        <span>webmek.agency</span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <i class="fas fa-envelope"></i>
+
+                        <span>Contact through our website</span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <i class="fas fa-headset"></i>
+
+                        <span>Customer Support</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONTACT FORM -->
+                <div class="contact-form-card">
+
+                    <h3>Send Your Requirement</h3>
+
+                    <p>
+                        Fill in your details to discuss your project.
+                    </p>
+
+
+                    <form action="/contact" method="POST">
+
+                        <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        required>
+
+
+                        <input
+                        type="text"
+                        name="business"
+                        placeholder="Business Name"
+                        required>
+
+
+                        <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number"
+                        required>
+
+
+                        <input
+                        type="email"
+                        name="email"
+                        placeholder="Email Address">
+
+
+                        <select name="businessType" required>
+
+                            <option value="">
+                                Select Business Type
+                            </option>
+
+                            <option value="Restaurant">
+                                Restaurant
+                            </option>
+
+                            <option value="Hotel">
+                                Hotel
+                            </option>
+
+                            <option value="Shop">
+                                Shop
+                            </option>
+
+                            <option value="Salon">
+                                Salon
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+
+                        <textarea
+                        name="requirement"
+                        rows="5"
+                        placeholder="Tell us about your project..."
+                        required></textarea>
+
+
+                        <button type="submit" class="btn btn-primary btn-lg">
+
+                            Send Requirement
+
+                            <i class="fas fa-paper-plane"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+
+            <div class="footer-grid">
+
+
+                <!-- FOOTER BRAND -->
+                <div class="footer-brand">
+
+                    <a href="#home" class="brand">
+
+                        <img
+                        src="{{ url_for('static', filename='image/WhatsApp_Image_2026-09-25_at_21.04.05-removebg-preview.png') }}"
+                        alt="WebMek">
+
+                    </a>
+
+
+                    <p>
+                        WebMek provides affordable digital solutions
+                        to help businesses grow online.
+                    </p>
+
+                </div>
+
+
+
+                <!-- QUICK LINKS -->
+                <div class="footer-links">
+
+                    <h3>Quick Links</h3>
+
+                    <a href="#home">Home</a>
+
+                    <a href="#about">About Us</a>
+
+                    <a href="#services">Services</a>
+
+                    <a href="#portfolio">Portfolio</a>
+
+                    <a href="#contact">Contact</a>
+
+                </div>
+
+
+
+                <!-- SERVICES -->
+                <div class="footer-links">
+
+                    <h3>Our Services</h3>
+
+                    <a href="#services">Website Development</a>
+
+                    <a href="#services">WhatsApp Integration</a>
+
+                    <a href="#services">Booking Systems</a>
+
+                    <a href="#services">Digital Solutions</a>
+
+                </div>
+
+
+
+                <!-- ACCOUNT -->
+                <div class="footer-links">
+
+                    <h3>Account</h3>
+
+                    <a href="/login">Login</a>
+
+                    <a href="/signup">Sign Up</a>
+
+                    <a href="#pricing">Pricing</a>
+
+                    <a href="#contact">Get Started</a>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- COPYRIGHT -->
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 WebMek. All Rights Reserved.
+                </p>
+
+                <a href="#home">
+                    Back to Top ↑
                 </a>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
-
-</main>
+    </footer>
 
 
-<!-- FOOTER -->
 
-<footer class="site-footer">
-
-    <div class="container footer-grid">
-
-        <div class="footer-brand">
-
-            <a href="#home" class="brand">
-                <img
-                    src="{{ url_for('static', filename='image/WhatsApp_Image_2026-09-25_at_21.04.05-removebg-preview.png') }}"
-                    alt="WebMek Logo">
-            </a>
-
-            <p>
-                Affordable Digital Solutions.
-                Your Business, Our Technology.
-            </p>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <h3>Quick Links</h3>
-
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#portfolio">Portfolio</a>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <h3>Company</h3>
-
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
-            <a href="/login">Login</a>
-            <a href="/signup">Sign Up</a>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <h3>Our Services</h3>
-
-            <a href="#services">Website Development</a>
-            <a href="#services">WhatsApp Integration</a>
-            <a href="#services">Booking Systems</a>
-            <a href="#services">Digital Solutions</a>
-
-        </div>
-
-    </div>
-
-
-    <div class="container footer-bottom">
-
-        <p>
-            © 2026 WebMek. All rights reserved.
-        </p>
-
-        <a href="#home">Back to Top ↑</a>
-
-    </div>
-
-</footer>
-
-
-<!-- JAVASCRIPT -->
-
-<script src="{{ url_for('static', filename='script.js') }}"></script>
+    <!-- JAVASCRIPT -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
 </html>
