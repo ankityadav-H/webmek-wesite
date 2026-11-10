@@ -1,21 +1,29 @@
 
-/* 1. ROOT VARIABLES */
+/* ============================================
+   WEBMEK - COMPLETE CSS
+   THEME: DARK NAVY + ROYAL BLUE
+   BRAND: WEBMEK
+============================================ */
+
+/* ROOT */
 
 :root {
-    --navy: #17145d;
-    --blue: #3435c9;
-    --royal: #454be8;
-    --light-blue: #eef0ff;
-    --bg: #f7f8ff;
+    --navy: #061438;
+    --dark: #02091c;
+    --blue: #006bff;
+    --royal: #168bff;
+    --sky: #38b6ff;
+    --light: #dceaff;
+    --bg: #020b20;
     --white: #ffffff;
-    --text: #171b42;
-    --muted: #6b7190;
-    --border: #e3e6f4;
-    --shadow: 0 15px 45px rgba(23, 20, 93, .09);
-    --radius: 18px;
+    --text: #ffffff;
+    --muted: #b9c9e4;
+    --border: rgba(30,135,255,.35);
+    --card: #071b3d;
+    --shadow: 0 15px 45px rgba(0,70,255,.20);
 }
 
-/* 2. RESET */
+/* RESET */
 
 * {
     margin: 0;
@@ -51,7 +59,7 @@ img {
     display: block;
 }
 
-/* 3. COMMON CONTAINER */
+/* CONTAINER */
 
 .container {
     width: min(1200px, calc(100% - 40px));
@@ -63,17 +71,17 @@ img {
     position: relative;
 }
 
-/* 4. BACKGROUND EFFECTS */
+/* BACKGROUND */
 
 .bg-grid {
     position: fixed;
     inset: 0;
     z-index: -2;
     pointer-events: none;
-    opacity: .15;
+    opacity: .5;
     background-image:
-        linear-gradient(rgba(52,53,201,.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(52,53,201,.06) 1px, transparent 1px);
+        linear-gradient(rgba(0,110,255,.08) 1px, transparent 1px),
+        linear-gradient(90deg,rgba(0,110,255,.08) 1px,transparent 1px);
     background-size: 40px 40px;
 }
 
@@ -82,26 +90,22 @@ img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        rgba(52,53,201,.10),
-        transparent 70%
-    );
+    background: radial-gradient(circle,rgba(0,110,255,.16),transparent 70%);
     pointer-events: none;
     z-index: -1;
 }
 
-/* 5. HEADER */
+/* HEADER */
 
 .site-header {
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255,255,255,.95);
+    background: rgba(2,12,35,.96);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--border);
-    box-shadow: 0 3px 15px rgba(23,20,93,.04);
+    box-shadow: 0 5px 25px rgba(0,70,255,.12);
 }
 
 .nav-wrap {
@@ -134,12 +138,13 @@ img {
 .desktop-nav a {
     font-size: 14px;
     font-weight: 600;
-    color: var(--text);
+    color: #fff;
     transition: .25s;
 }
 
-.desktop-nav a:hover {
-    color: var(--blue);
+.desktop-nav a:hover,
+.desktop-nav a.active {
+    color: var(--sky);
 }
 
 .nav-actions {
@@ -152,14 +157,14 @@ img {
     display: none;
     width: 42px;
     height: 42px;
-    border: 1px solid var(--border);
+    border: 1px solid var(--blue);
     border-radius: 10px;
-    background: white;
-    color: var(--navy);
+    background: var(--card);
+    color: white;
     font-size: 20px;
 }
 
-/* 6. BUTTONS */
+/* BUTTONS */
 
 .btn {
     display: inline-flex;
@@ -175,34 +180,30 @@ img {
 }
 
 .btn-primary {
-    background: linear-gradient(
-        135deg,
-        var(--navy),
-        var(--blue)
-    );
+    background: linear-gradient(135deg,#006bff,#168bff);
     color: white;
-    box-shadow: 0 7px 20px rgba(52,53,201,.20);
+    box-shadow: 0 7px 20px rgba(0,107,255,.30);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(52,53,201,.30);
+    box-shadow: 0 12px 25px rgba(0,107,255,.40);
 }
 
 .btn-outline {
-    background: white;
-    color: var(--navy);
-    border-color: var(--blue);
+    background: rgba(0,70,180,.12);
+    color: white;
+    border-color: var(--royal);
 }
 
 .btn-outline:hover {
-    background: var(--light-blue);
+    background: #0759c8;
     transform: translateY(-2px);
 }
 
 .btn-ghost {
     background: transparent;
-    color: var(--navy);
+    color: white;
 }
 
 .btn-lg {
@@ -210,22 +211,14 @@ img {
     font-size: 15px;
 }
 
-/* 7. HERO SECTION */
+/* HERO */
 
 .hero {
     position: relative;
     padding: 85px 0;
     background:
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(52,53,201,.13),
-            transparent 32%
-        ),
-        linear-gradient(
-            120deg,
-            #ffffff,
-            #f0f2ff
-        );
+        radial-gradient(circle at 75% 50%,rgba(0,105,255,.45),transparent 40%),
+        linear-gradient(120deg,#02091c,#041a42,#001a4b);
     overflow: hidden;
 }
 
@@ -246,8 +239,9 @@ img {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: var(--light-blue);
-    color: var(--blue);
+    background: rgba(0,105,255,.18);
+    color: white;
+    border: 1px solid rgba(0,145,255,.45);
     padding: 9px 16px;
     border-radius: 30px;
     font-size: 13px;
@@ -258,27 +252,22 @@ img {
 .pulse-dot {
     width: 9px;
     height: 9px;
-    background: var(--blue);
+    background: var(--royal);
     border-radius: 50%;
     box-shadow: 0 0 0 6px rgba(52,53,201,.12);
 }
 
 .hero h1 {
-    font-size: clamp(42px, 5vw, 68px);
+    font-size: clamp(42px,5vw,68px);
     line-height: 1.13;
     letter-spacing: -2px;
-    color: var(--navy);
+    color: white;
     font-weight: 800;
     margin-bottom: 22px;
 }
 
 .gradient-text {
-    background: linear-gradient(
-        90deg,
-        var(--navy),
-        var(--blue),
-        #737cff
-    );
+    background: linear-gradient(90deg,#168bff,#00b7ff,#54c8ff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -286,7 +275,7 @@ img {
 
 .hero-text {
     max-width: 540px;
-    color: var(--muted);
+    color: #d0ddf5;
     font-size: 17px;
     line-height: 1.9;
     margin-bottom: 30px;
@@ -298,7 +287,7 @@ img {
     gap: 14px;
 }
 
-/* 8. TRUST ROW */
+/* TRUST */
 
 .trust-row {
     display: flex;
@@ -315,8 +304,8 @@ img {
 
 .trust-item > i {
     font-size: 20px;
-    color: var(--blue);
-    background: var(--light-blue);
+    color: #28a5ff;
+    background: #082b60;
     padding: 12px;
     border-radius: 12px;
 }
@@ -328,15 +317,15 @@ img {
 
 .trust-item strong {
     font-size: 16px;
-    color: var(--navy);
+    color: white;
 }
 
 .trust-item span {
     font-size: 11px;
-    color: var(--muted);
+    color: #bdd0ed;
 }
 
-/* 9. HERO VISUAL */
+/* HERO VISUAL */
 
 .hero-visual {
     position: relative;
@@ -355,7 +344,7 @@ img {
 .orb-a {
     width: 240px;
     height: 240px;
-    background: rgba(52,53,201,.13);
+    background: rgba(0,110,255,.30);
     top: 5%;
     right: 5%;
 }
@@ -363,26 +352,29 @@ img {
 .orb-b {
     width: 170px;
     height: 170px;
-    background: rgba(23,20,93,.10);
+    background: rgba(0,70,180,.25);
     bottom: 5%;
     left: 5%;
 }
 
+/* BROWSER MOCKUP */
+
 .browser-card {
     width: 100%;
     max-width: 520px;
-    background: white;
-    border: 1px solid var(--border);
+    background: #061737;
+    border: 1px solid #087bff;
     border-radius: 17px;
     overflow: hidden;
-    box-shadow: 0 25px 65px rgba(23,20,93,.15);
+    box-shadow: 0 25px 65px rgba(0,100,255,.25);
     position: relative;
     z-index: 2;
     animation: float 5s ease-in-out infinite;
 }
 
 .browser-top {
-    background: #eef0ff;
+    background: #0a2250;
+    border-bottom: 1px solid #174b91;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -416,8 +408,8 @@ img {
 .browser-url {
     flex: 1;
     text-align: center;
-    background: white;
-    color: var(--muted);
+    background: #06142f;
+    color: #bbd8ff;
     border-radius: 6px;
     padding: 5px;
     font-size: 11px;
@@ -425,6 +417,7 @@ img {
 
 .mini-website {
     padding: 22px;
+    background: #061737;
 }
 
 .mini-nav {
@@ -433,41 +426,37 @@ img {
     justify-content: space-between;
     gap: 10px;
     font-size: 10px;
-    color: var(--muted);
+    color: white;
     margin-bottom: 35px;
 }
 
 .mini-nav strong {
-    color: var(--navy);
+    color: #38a8ff;
     font-size: 17px;
 }
 
 .mini-hero {
-    background: linear-gradient(
-        120deg,
-        #f0f1ff,
-        #e2e6ff
-    );
+    background: linear-gradient(120deg,#08285f,#064dab);
     border-radius: 12px;
     padding: 35px 20px;
     text-align: center;
 }
 
 .mini-hero h3 {
-    color: var(--navy);
+    color: white;
     font-size: 25px;
     margin-bottom: 8px;
 }
 
 .mini-hero p {
-    color: var(--muted);
+    color: #d5e6ff;
     font-size: 11px;
     margin-bottom: 17px;
 }
 
 .mini-btn {
     display: inline-block;
-    background: var(--blue);
+    background: #087bff;
     color: white;
     padding: 9px 18px;
     border-radius: 6px;
@@ -483,7 +472,7 @@ img {
 .mini-lines i {
     height: 7px;
     flex: 1;
-    background: #e4e7f6;
+    background: #15366b;
     border-radius: 10px;
 }
 
@@ -495,22 +484,22 @@ img {
 
 .mini-services div {
     padding: 15px 5px;
-    background: #f7f8ff;
-    border: 1px solid var(--border);
+    background: #0a2450;
+    border: 1px solid #174b91;
     border-radius: 9px;
     text-align: center;
 }
 
 .mini-services i {
     display: block;
-    color: var(--blue);
+    color: #27a5ff;
     font-size: 20px;
     margin-bottom: 7px;
 }
 
 .mini-services span {
     font-size: 10px;
-    color: var(--muted);
+    color: #d0dfff;
 }
 
 .floating-label {
@@ -518,30 +507,34 @@ img {
     z-index: 3;
     bottom: 12%;
     right: -3%;
-    background: white;
+    background: #071b42;
     padding: 14px 19px;
+    border: 1px solid #087bff;
     border-radius: 12px;
     box-shadow: var(--shadow);
-    color: var(--navy);
+    color: white;
     font-size: 13px;
     font-weight: 700;
 }
 
 .floating-label i {
-    color: var(--blue);
+    color: #29a8ff;
     margin-right: 8px;
 }
 
+/* FLOAT ANIMATION */
+
 @keyframes float {
-    0%, 100% {
+    0%,100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-12px);
     }
 }
 
-/* 10. SECTION HEADINGS */
+/* SECTION HEADINGS */
 
 .section-head {
     text-align: center;
@@ -551,7 +544,7 @@ img {
 
 .section-tag {
     display: inline-block;
-    color: var(--blue);
+    color: #38a8ff;
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 2px;
@@ -560,7 +553,7 @@ img {
 
 .section-head h2,
 .about-content h2 {
-    color: var(--navy);
+    color: white;
     font-size: clamp(30px,4vw,44px);
     line-height: 1.2;
     margin-bottom: 15px;
@@ -571,10 +564,10 @@ img {
     font-size: 16px;
 }
 
-/* 11. SERVICES */
+/* SERVICES */
 
 .services-section {
-    background: white;
+    background: #030e28;
 }
 
 .services-grid {
@@ -585,17 +578,17 @@ img {
 
 .service-card {
     padding: 30px 24px;
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: 0 5px 20px rgba(23,20,93,.04);
+    background: linear-gradient(145deg,#071b3d,#092654);
+    border: 1px solid #104b91;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,70,180,.15);
     transition: .3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow);
-    border-color: #b7bcf5;
+    box-shadow: 0 12px 35px rgba(0,100,255,.25);
+    border-color: #168bff;
 }
 
 .service-icon {
@@ -605,15 +598,15 @@ img {
     align-items: center;
     justify-content: center;
     border-radius: 15px;
-    background: var(--light-blue);
-    color: var(--blue);
+    background: #0c326b;
+    color: #37aeff;
     font-size: 24px;
     margin-bottom: 22px;
 }
 
 .service-card h3 {
     font-size: 18px;
-    color: var(--navy);
+    color: white;
     margin-bottom: 12px;
 }
 
@@ -625,15 +618,15 @@ img {
 }
 
 .service-card a {
-    color: var(--blue);
+    color: #36a8ff;
     font-size: 13px;
     font-weight: 700;
 }
 
-/* 12. ABOUT */
+/* ABOUT */
 
 .about-section {
-    background: #f5f6ff;
+    background: #030e28;
 }
 
 .about-grid {
@@ -650,11 +643,7 @@ img {
     justify-content: center;
     align-items: center;
     border-radius: 25px;
-    background: linear-gradient(
-        135deg,
-        #17145d,
-        #3435c9
-    );
+    background: linear-gradient(135deg,#061438,#0754b8);
     box-shadow: var(--shadow);
 }
 
@@ -699,20 +688,20 @@ img {
 }
 
 .about-points div {
-    color: var(--text);
+    color: #e2ebff;
     font-size: 13px;
     font-weight: 600;
 }
 
 .about-points i {
-    color: var(--blue);
+    color: #32a5ff;
     margin-right: 7px;
 }
 
-/* 13. PRICING */
+/* PRICING */
 
 .pricing-section {
-    background: white;
+    background: #030e28;
 }
 
 .pricing-grid {
@@ -724,11 +713,11 @@ img {
 
 .price-card {
     position: relative;
-    background: white;
-    border: 1px solid var(--border);
+    background: linear-gradient(145deg,#071a3a,#0a2450);
+    border: 1px solid #164c91;
     border-radius: 20px;
     padding: 35px 28px;
-    box-shadow: 0 5px 25px rgba(23,20,93,.05);
+    box-shadow: 0 5px 25px rgba(0,70,180,.12);
     transition: .3s;
 }
 
@@ -738,7 +727,7 @@ img {
 }
 
 .price-card h3 {
-    color: var(--navy);
+    color: white;
     font-size: 23px;
 }
 
@@ -749,7 +738,7 @@ img {
 }
 
 .price {
-    color: var(--navy);
+    color: #42aeff;
     font-size: 38px;
     font-weight: 800;
     margin-bottom: 25px;
@@ -768,13 +757,13 @@ img {
 
 .price-card li {
     padding: 11px 0;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #194274;
     font-size: 14px;
-    color: var(--muted);
+    color: #d0dcf0;
 }
 
 .price-card li i {
-    color: var(--blue);
+    color: #32a5ff;
     margin-right: 9px;
 }
 
@@ -783,15 +772,15 @@ img {
 }
 
 .price-card.featured {
-    border: 2px solid var(--blue);
-    box-shadow: 0 15px 40px rgba(52,53,201,.12);
+    border: 2px solid #168bff;
+    box-shadow: 0 15px 40px rgba(0,100,255,.25);
 }
 
 .popular-tag {
     position: absolute;
     top: -14px;
     right: 22px;
-    background: var(--blue);
+    background: #087bff;
     color: white;
     border-radius: 20px;
     padding: 6px 14px;
@@ -806,10 +795,10 @@ img {
     margin-top: 30px;
 }
 
-/* 14. PORTFOLIO */
+/* PORTFOLIO */
 
 .portfolio-section {
-    background: #f5f6ff;
+    background: #030e28;
 }
 
 .portfolio-grid {
@@ -820,9 +809,9 @@ img {
 
 .portfolio-card {
     overflow: hidden;
-    background: white;
+    background: #071a3a;
     border-radius: 18px;
-    border: 1px solid var(--border);
+    border: 1px solid #164c91;
     transition: .3s;
 }
 
@@ -856,15 +845,15 @@ img {
 }
 
 .restaurant-preview {
-    background: linear-gradient(135deg,#17145d,#535be9);
+    background: linear-gradient(135deg,#061438,#075bca);
 }
 
 .hotel-preview {
-    background: linear-gradient(135deg,#202052,#6266c9);
+    background: linear-gradient(135deg,#071a3a,#0865c9);
 }
 
 .ecommerce-preview {
-    background: linear-gradient(135deg,#3038a1,#7884ff);
+    background: linear-gradient(135deg,#06204a,#008bff);
 }
 
 .portfolio-info {
@@ -872,7 +861,7 @@ img {
 }
 
 .portfolio-info h3 {
-    color: var(--navy);
+    color: white;
     font-size: 18px;
     margin-bottom: 7px;
 }
@@ -882,15 +871,11 @@ img {
     font-size: 13px;
 }
 
-/* 15. CTA */
+/* CTA */
 
 .cta-section {
     padding: 65px 0;
-    background: linear-gradient(
-        120deg,
-        #17145d,
-        #3435c9
-    );
+    background: linear-gradient(120deg,#03102e,#064baa,#007bff);
 }
 
 .cta-content {
@@ -922,13 +907,13 @@ img {
 }
 
 .cta-content p {
-    color: #dce0ff;
+    color: #d5e6ff;
     margin-top: 5px;
 }
 
 .cta-btn {
     background: white;
-    color: var(--navy);
+    color: #063078;
     padding: 14px 25px;
 }
 
@@ -937,10 +922,10 @@ img {
     transform: translateY(-3px);
 }
 
-/* 16. CONTACT */
+/* CONTACT */
 
 .contact-section {
-    background: white;
+    background: #030e28;
 }
 
 .contact-grid {
@@ -956,7 +941,7 @@ img {
 
 .contact-info h3,
 .contact-form-card h3 {
-    color: var(--navy);
+    color: white;
     font-size: 25px;
     margin-bottom: 12px;
 }
@@ -972,7 +957,7 @@ img {
     align-items: center;
     gap: 15px;
     margin: 20px 0;
-    color: var(--muted);
+    color: #d0dcf0;
     font-size: 14px;
 }
 
@@ -983,23 +968,58 @@ img {
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    color: var(--blue);
-    background: var(--light-blue);
+    color: #38aaff;
+    background: #0a326d;
 }
 
 .contact-form-card {
-    background: #f5f6ff;
+    background: #071b3d;
     padding: 40px;
-    border: 1px solid var(--border);
+    border: 1px solid #164c91;
     border-radius: 20px;
 }
 
-/* 17. FOOTER */
+/* FORMS */
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #24528b;
+    border-radius: 10px;
+    background: #071a3a;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9fb3d2;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #168bff;
+    box-shadow: 0 0 0 3px rgba(52,53,201,.15);
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #737cff;
+    outline-offset: 3px;
+}
+
+/* FOOTER */
 
 .site-footer {
-    background: #111344;
+    background: #01091d;
     color: white;
     padding-top: 65px;
+    border-top: 1px solid #0754b8;
 }
 
 .footer-grid {
@@ -1024,7 +1044,7 @@ img {
 
 .footer-brand p {
     max-width: 260px;
-    color: #c9cbe5;
+    color: #b9c9e4;
     font-size: 14px;
     line-height: 1.8;
 }
@@ -1042,61 +1062,32 @@ img {
 }
 
 .footer-links a {
-    color: #c9cbe5;
+    color: #b9c9e4;
     font-size: 13px;
     transition: .2s;
 }
 
 .footer-links a:hover {
-    color: white;
+    color: #38a8ff;
     padding-left: 5px;
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,.15);
+    border-top: 1px solid #193a68;
     padding: 22px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 15px;
-    color: #c9cbe5;
+    color: #b9c9e4;
     font-size: 12px;
 }
 
 .footer-bottom a {
-    color: white;
+    color: #38a8ff;
 }
 
-/* 18. FORMS */
-
-input,
-textarea,
-select {
-    width: 100%;
-    padding: 13px 15px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    background: white;
-    color: var(--navy);
-    font-family: inherit;
-    font-size: 14px;
-    outline: none;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-    border-color: var(--blue);
-    box-shadow: 0 0 0 3px rgba(52,53,201,.10);
-}
-
-button:focus-visible,
-a:focus-visible {
-    outline: 3px solid #737cff;
-    outline-offset: 3px;
-}
-
-/* 19. ANIMATIONS */
+/* ANIMATIONS */
 
 @keyframes fadeUp {
     from {
@@ -1115,9 +1106,9 @@ a:focus-visible {
     animation: fadeUp .8s ease both;
 }
 
-/* 20. TABLET RESPONSIVE */
+/* TABLET */
 
-@media (max-width: 1000px) {
+@media (max-width:1000px) {
 
     .desktop-nav {
         gap: 15px;
@@ -1144,9 +1135,9 @@ a:focus-visible {
     }
 }
 
-/* 21. MOBILE RESPONSIVE */
+/* MOBILE */
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
 
     .container {
         width: calc(100% - 32px);
@@ -1185,6 +1176,8 @@ a:focus-visible {
         gap: 0;
         padding: 10px 0 15px;
         order: 3;
+        background: #061632;
+        border-top: 1px solid #164c91;
     }
 
     .desktop-nav.active {
@@ -1193,8 +1186,9 @@ a:focus-visible {
 
     .desktop-nav a {
         padding: 12px 5px;
-        border-bottom: 1px solid var(--border);
+        border-bottom: 1px solid #173963;
         font-size: 14px;
+        color: white;
     }
 
     .hero {
@@ -1260,9 +1254,9 @@ a:focus-visible {
     }
 }
 
-/* 22. SMALL MOBILE */
+/* SMALL MOBILE */
 
-@media (max-width: 480px) {
+@media (max-width:480px) {
 
     .hero h1 {
         font-size: 40px;
@@ -1354,9 +1348,9 @@ a:focus-visible {
     }
 }
 
-/* 23. ACCESSIBILITY */
+/* ACCESSIBILITY */
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion:reduce) {
 
     *,
     *::before,
