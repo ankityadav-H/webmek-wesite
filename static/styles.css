@@ -1,17 +1,24 @@
+
 :root {
-  --bg: #06070b;
-  --surface: #0d1018;
-  --surface-2: #121621;
-  --line: rgba(255, 255, 255, .10);
-  --text: #f7f9ff;
-  --muted: #9ca6bb;
-  --accent: #73f1c8;
-  --accent-2: #8b7cff;
-  --accent-3: #58b6ff;
-  --danger: #ff6b7a;
+  --bg: #f6f7fc;
+  --surface: #ffffff;
+  --surface-2: #eef0fa;
+
+  --line: rgba(23, 20, 93, 0.12);
+
+  --text: #17145d;
+  --muted: #686982;
+
+  --accent: #3435c9;
+  --accent-2: #17145d;
+  --accent-3: #6669e8;
+
+  --danger: #e5485d;
+
   --radius: 20px;
-  --shadow: 0 25px 80px rgba(0, 0, 0, .35);
+  --shadow: 0 20px 60px rgba(23, 20, 93, 0.10);
 }
+
 
 * {
   box-sizing: border-box;
@@ -1999,3 +2006,120 @@ body.modal-open {
   }
 
 }
+
+/* ===== WEBMEK LOGO BRANDING ===== */
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.site-header {
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom: 1px solid var(--line);
+}
+
+.desktop-nav a {
+    color: #555675;
+}
+
+.desktop-nav a:hover {
+    color: #3435c9;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #17145d, #3435c9);
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(52, 53, 201, 0.20);
+}
+
+.btn-outline {
+    color: #17145d;
+    border-color: rgba(23, 20, 93, 0.25);
+    background: #ffffff;
+}
+
+.btn-outline:hover {
+    border-color: #3435c9;
+    background: #f0f0ff;
+}
+
+.btn-ghost {
+    color: #17145d;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #17145d, #3435c9, #7778e8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.pulse-dot {
+    background: #3435c9;
+    box-shadow: 0 0 0 7px rgba(52, 53, 201, 0.10);
+}
+
+.browser-card {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+}
+
+.browser-top {
+    background: #eef0fa;
+}
+
+.mini-device {
+    background: #ffffff;
+}
+
+.device-screen {
+    background: linear-gradient(145deg, #eef0ff, #dfe1ff);
+}
+
+.device-screen span {
+    color: #555675;
+}
+
+.mini-btn {
+    background: #eeeeff;
+    color: #3435c9;
+}
+
+.referral-banner {
+    background:
+        radial-gradient(circle at 85% 50%,
+        rgba(52, 53, 201, 0.35),
+        transparent 40%),
+        linear-gradient(135deg, #17145d, #3435c9);
+}
+
+.referral-badge {
+    color: #ffffff;
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.4);
+}
+
+.referral-btn {
+    background: #ffffff;
+    color: #17145d;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.orb-a {
+    background: rgba(52, 53, 201, 0.15);
+}
+
+.orb-b {
+    background: rgba(23, 20, 93, 0.15);
+}
+
+.cursor-glow {
+    background: radial-gradient(
+        circle,
+        rgba(52, 53, 201, 0.12),
+        transparent 65%
+    );
+}
+
